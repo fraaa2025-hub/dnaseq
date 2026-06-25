@@ -62,5 +62,8 @@ featureCounts \
 -a GCF_020097475.1_ASM2009747v1_genomic.gff \
 -o count.txt \
 results/bam_res/SRR2589044.aligned.sorted.bam
-
+#IGV
+samtools faidx ecoli.fa
+samtools index SRR2589044.aligned.sorted.bam
+#.fa,.fasta,.bam,.bai -4 files in a folder
  
