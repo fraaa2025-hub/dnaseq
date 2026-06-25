@@ -20,6 +20,8 @@ SLIDINGWINDOW:4:20 \
 MINLEN:25
 
 
+
+
 fastqc *.fastq*
 
 
@@ -54,4 +56,11 @@ data/trimmed_fastq/SRR2589044_2.trim.fastq.gz \
  
  
  bcftools mpileup -f data/refgenome/ecoli_reference.fasta results/bam_res/SRR2589044.aligned.sorted.bam | bcftools call -mv -o results/vcf/SRR2589044.variants.vcf
+
+# for count.txt
+featureCounts \
+-a GCF_020097475.1_ASM2009747v1_genomic.gff \
+-o count.txt \
+results/bam_res/SRR2589044.aligned.sorted.bam
+
  
